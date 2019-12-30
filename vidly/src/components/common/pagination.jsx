@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 
+//Testing git
 const Pagination = props => {
   const { itemsCount, pageSize } = props;
   const pagesCount = Math.ceil(itemsCount / pageSize);
