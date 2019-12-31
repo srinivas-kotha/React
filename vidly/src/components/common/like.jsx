@@ -1,19 +1,15 @@
 import React from "react";
-//Input: liked: boolean
-//Output: onClick
 
 const Like = props => {
-  let classes = "";
-  if (props.liked) classes = "fas";
-  else classes = "far";
-  classes = classes + " fa-heart";
-
+  let classes = "fas fa-heart";
+  if (!props.liked) classes = "far fa-heart";
   return (
     <i
       onClick={props.onClick}
       style={{ cursor: "pointer" }}
       className={classes}
-    ></i>
+      aria-hidden="true"
+    />
   );
 };
 
